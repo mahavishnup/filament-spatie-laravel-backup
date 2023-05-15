@@ -2,12 +2,15 @@
 
 namespace ShuvroRoy\FilamentSpatieLaravelBackup\Pages;
 
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use Filament\Pages\Actions;
 use Filament\Pages\Page;
 use ShuvroRoy\FilamentSpatieLaravelBackup\Jobs\CreateBackupJob;
 
 class Backups extends Page
 {
+    use HasPageShield;
+
     protected static ?string $navigationIcon = 'heroicon-o-support';
 
     protected static string $view = 'filament-spatie-backup::pages.backups';
